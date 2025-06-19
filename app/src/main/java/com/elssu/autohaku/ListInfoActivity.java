@@ -31,6 +31,8 @@ public class ListInfoActivity extends AppCompatActivity {
         CityText = findViewById(R.id.CityText);
         String cityy = CarDataStorage.getInstance().getCity();
         int yearr = CarDataStorage.getInstance().getYear();
+        yearText.setText(String.valueOf(yearr));
+        CityText.setText(cityy);
         StringBuilder builder = new StringBuilder();
         ArrayList<CarData> carData= CarDataStorage.getInstance().getCarData();
         if(carData == null){
