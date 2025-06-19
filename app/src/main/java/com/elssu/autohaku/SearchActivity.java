@@ -113,6 +113,10 @@ public class SearchActivity extends AppCompatActivity {
         for(int i = 0; i < keys.size(); i++) {
             municipalityCodes.put(keys.get(i), values.get(i));
         }
+        if (!municipalityCodes.containsKey(city.trim())) {
+            runOnUiThread(() -> statusOutputText.setText("Haku epäonnistui"));
+            return;
+        }
 
         String code = null;
         String municipality = city;
