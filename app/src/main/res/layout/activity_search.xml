@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity">
+
+    <EditText
+        android:id="@+id/CityNameEdit"
+        android:layout_width="254dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="76dp"
+        android:ems="10"
+        android:hint="Kaupunki"
+        android:inputType="text"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/YearEdit"
+        android:layout_width="255dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:hint="2011-2014"
+        android:inputType="text"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/CityNameEdit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/CityNameEdit"
+        app:layout_constraintTop_toBottomOf="@+id/CityNameEdit" />
+
+    <Button
+        android:id="@+id/SearchButton"
+        android:layout_width="258dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="16dp"
+        android:onClick="searchInfo"
+        android:text="Hae tiedot"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/StatusText"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="@+id/StatusText"
+        app:layout_constraintTop_toBottomOf="@+id/StatusText" />
+
+    <Button
+        android:id="@+id/ListInfoActivityButton"
+        android:layout_width="179dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="80dp"
+        android:onClick="switchToInfoListButton"
+        android:text="Siirry            tietoihin"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/SearchButton"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@+id/SearchButton"
+        app:layout_constraintTop_toBottomOf="@+id/SearchButton" />
+
+    <Button
+        android:id="@+id/MainMenuButton"
+        android:layout_width="180dp"
+        android:layout_height="76dp"
+        android:onClick="switchToMainMenu"
+        android:text="Palaa päävalikkoon"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ListInfoActivityButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ListInfoActivityButton"
+        app:layout_constraintTop_toBottomOf="@+id/ListInfoActivityButton"
+        app:layout_constraintVertical_bias="0.191" />
+
+    <TextView
+        android:id="@+id/StatusText"
+        android:layout_width="293dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/YearEdit"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="@+id/YearEdit"
+        app:layout_constraintTop_toBottomOf="@+id/YearEdit" />
+</androidx.constraintlayout.widget.ConstraintLayout>
